@@ -127,7 +127,7 @@ def handle_user_input(user_question):
 
         # Display chat history and source documents
         for i, message in enumerate(st.session_state.chat_history):
-            role = "🧑‍💻 User" if i % 2 == 0 else "🤖 Assistant"
+            role = "User" if i % 2 == 0 else "Assistant"
             with st.chat_message(role):
                 st.markdown(message.content)
         
@@ -144,8 +144,8 @@ def handle_user_input(user_question):
 
 def main():
     try:
-        st.set_page_config("PDF Q&A System", layout="wide")
-        st.title("📚 PDF Question & Answer System")
+        st.set_page_config("Gen AI", layout="wide")
+        st.title("Information Retrieval System")
 
         # Initialize session state
         if "conversation" not in st.session_state:

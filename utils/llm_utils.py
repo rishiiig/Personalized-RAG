@@ -26,7 +26,10 @@ def get_conversational_chain(vector_store, api_key):
         
         # Custom prompt template for the question answering
         qa_prompt_template = """
-        Answer the question based on the context provided. If you cannot find the answer in the context, say "I cannot find the answer to this question in the provided documents."
+        Answer the question based on the context provided.
+        If you cannot find the answer in the context, Just give the answer from the most relevant part of the source which you find, but it should be very reliable answer about.
+        Even after that, if you even cannot find the answer/relevant answer in the context, tell the exact reason why you cannot find the answer and keep the reason very short and simple.
+        The user is a developer so you can give the exact technical reason so that it helps the developer to fix the issue.
 
         Context: {context}
         Question: {question}
