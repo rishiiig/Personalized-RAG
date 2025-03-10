@@ -30,6 +30,7 @@ def get_conversational_chain(vector_store, api_key):
         If you cannot find the answer in the context, Just give the answer from the most relevant part of the source which you find, but it should be very reliable answer about.
         Even after that, if you even cannot find the answer/relevant answer in the context, tell the exact reason why you cannot find the answer and keep the reason very short and simple.
         The user is a developer so you can give the exact technical reason so that it helps the developer to fix the issue.
+        Give large answers
 
         Context: {context}
         Question: {question}
