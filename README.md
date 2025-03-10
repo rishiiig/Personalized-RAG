@@ -1,3 +1,5 @@
+Python version : 3.11.9
+
 Install necessory packages from requirements.txt
 
 create a .env  file and write the following:
