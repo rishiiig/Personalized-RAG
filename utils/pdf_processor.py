@@ -1,28 +1,3 @@
-# import streamlit as st
-# from PyPDF2 import PdfReader
-# from langchain.text_splitter import RecursiveCharacterTextSplitter
-
-# def get_pdf_text(pdf_docs):
-#     text = ""
-#     for pdf in pdf_docs:
-#         try:
-#             pdf_reader = PdfReader(pdf)
-#             for page in pdf_reader.pages:
-#                 text += page.extract_text() or ""
-#         except Exception as e:
-#             st.error(f"Error processing {pdf.name}: {str(e)}")
-#     return text
-
-# def get_text_chunks(text):
-#     splitter = RecursiveCharacterTextSplitter(
-#         chunk_size=1000,
-#         chunk_overlap=200,
-#         length_function=len,
-#         separators=["\n\n", "\n", " ", ""]
-#     )
-#     return splitter.split_text(text)
-
-
 import streamlit as st
 from PyPDF2 import PdfReader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
