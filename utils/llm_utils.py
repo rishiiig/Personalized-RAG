@@ -20,7 +20,7 @@ def get_conversational_chain(vector_store, api_key):
     try:
         llm = ChatGoogleGenerativeAI(
             google_api_key=api_key,
-            model="gemini-pro",
+            model="gemini-2.0-flash",
             temperature=0.3
         )
         
